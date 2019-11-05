@@ -1,0 +1,9 @@
+<html>
+<body>
+<ul>
+<li><a href="aboutus.html" target="frame2">About Us</a></li>
+<li><a href="products.html" target="frame2">Our Products</a></li>
+<li><a href="contactus.html" target="frame2">Contact Us</a></li>
+</ul>
+</body>
+</html>

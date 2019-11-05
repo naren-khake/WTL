@@ -1,0 +1,42 @@
+<html>
+<head>
+<link href="style.css" rel="stylesheet" type="text/css">
+<script src="myscript.js"></script>
+</head>
+<body>
+<div class="container">
+<form method="post" onsubmit="return addEntry()">
+<label>NAME :</label>
+<input type="text" name="name" placeholder="ENTER NAME" required><br>
+<label>ENGLISH :</label>
+<input type="number" pattern="[0-9]*" name="english" placeholder="ENTER ENGLISH MARKS" required><br>
+<label>MARATHI :</label>
+<input type="number" pattern="[0-9]*" name="marathi" placeholder="ENTER MARATHI MARKS" required><br>
+<label>MATHS :</label>
+<input type="number" pattern="[0-9]*" name="maths" placeholder="ENTER MATHS MARKS" required><br>
+<label>SCIENCE :</label>
+<input type="number" pattern="[0-9]*" name="science" placeholder="ENTER SCIENCE MARKS" required><br>
+<label>HISTORY :</label>
+<input type="number" pattern="[0-9]*" name="history" placeholder="ENTER HISTORY MARKS" required><br><br>
+<center>
+<button type="submit">SUBMIT</button>
+<button type="reset">RESET</button>
+</center>
+</form>
+</div>
+<center>
+<br><br>
+<table border="1px" id="result" style="text-align:center">
+<tr>
+	<th>NAME</th>
+	<th>ENGLISH</th>
+	<th>MARATHI</th>
+	<th>MATHS</th>
+	<th>SCIENCE</th>
+	<th>HISTORY</th>
+	<th>PERCENTAGE</th>
+</tr>
+</table>
+</center>
+</body>
+</html>

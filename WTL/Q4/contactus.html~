@@ -1,0 +1,16 @@
+<html>
+<head>
+<title>Contact Us - MyCompany</title>
+</head>
+<body>
+<h2>MyCompany</h2>
+<hr>
+<h4>Contact us</h4>
+<label>ADDRESS :</label>
+PICT College, Dhankawadi, Pune 411043<br>
+<label>EMAIL :</label>
+admin@mail.com<br>
+<label>Phone Number:</label>
++020-123456
+</body>
+</html>

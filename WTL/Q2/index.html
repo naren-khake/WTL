@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>Online Registration</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+<script src="myscript.js"></script>
+</head>
+<body>
+<div class="container">
+<h1 style="text-align:center">REGISTRATION </h1>
+<form method="post" action="payment.html" onsubmit="return validate1()">
+<label>NAME :</label>
+<input type="text" name="name" placeholder="ENTER NAME" required><br>
+<label>EMAIL :</label>
+<input type="email" name="email" placeholder="ENTER EMAIL" required><br>
+<label>MOBILE NO:</label>
+<input type="number" name="mobile" placeholder="ENTER MOBILE NUMBER" required><br>
+<label>DESIGNATION :</label>
+<select name="designation">
+<option value="STUDENT">STUDENT</option>
+<option value="PROFESSOR">PROFESSOR</option>
+<option value="CORPORATE">CORPORATE</option>
+</select><br>
+<label>COUNTRY :</label>
+<select name="country">
+<option value="INDIA">INDIA</option>
+<option value="US">US</option>
+<option value="JAPAN">JAPAN</option>
+</select><br><br>
+<center>
+<button type="submit">BOOK NOW</button>
+<button type="reset">RESET</button>
+</center>
+</form>
+</div>
+</body>
+</html>

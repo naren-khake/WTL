@@ -1,0 +1,11 @@
+label{
+	display:inline-block;
+	width:120px
+}
+.container{
+	width:350px;
+	padding:20px;
+	margin: 0 auto;
+	margin-top:90px;
+	border:1px solid;
+}

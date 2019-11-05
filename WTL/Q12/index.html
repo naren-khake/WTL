@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Student DETAILS</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="container">
+<h3 align="center">STUDENT DETAILS</h3>
+<form action="insertData.php" method="post">
+<label for="rollno">ROLL NO.</label>
+<input type="number" name="rollno" placeholder="ENTER ROLL NUMBER" min=1 required><br>
+<label for="name">NAME</label>
+<input type="text" name="name" placeholder="ENTER NAME" required><br>
+<label for="name">DEPARTMENT</label>
+<select name="department">
+	<option value="COMP">COMP</option>
+	<option value="IT">IT</option>
+	<option value="ENTC">ENTC</option>
+</select><br>
+<center>
+<button type="submit">INSERT DATA</button>
+</center>
+</form>
+</div>
+</body>
+</html>

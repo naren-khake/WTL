@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Employee>
+<emp>
+<name>A</name>
+<id>1</id>
+<department>COMP</department>
+<salary>10000</salary>
+</emp>
+<emp>
+<name>B</name>
+<id>2</id>
+<department>IT</department>
+<salary>11000</salary>
+</emp>
+<emp>
+<name>C</name>
+<id>3</id>
+<department>ENTC</department>
+<salary>12000</salary>
+</emp>
+<emp>
+<name>D</name>
+<id>4</id>
+<department>COMP</department>
+<salary>13000</salary>
+</emp>
+</Employee>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Employee's Data</title>
+<style>
+td{
+	text-align:center;
+}
+</style>
+</head>
+<body>
+<center>
+<h2>EMPLOYEE TABLE</h2>
+<table id="emptable" border="1px" width="50%">
+<tr>
+	<th>ID</th>
+	<th>NAME</th>
+	<th>DEPARTMENT</th>
+	<th>SALARY</th>
+</tr>
+</table>
+<h2>STATISTICAL DATA</h2>
+<table id="stat" border="1px" width="50%">
+<tr>
+	<th>DEPARTMENT</th>
+	<th>EMPLOYEE COUNT</th>
+	<th>AVERAGE SALARY</th>
+</tr>
+</table>
+</center>
+<script type="text/javascript">
+
+	var xhttp=new XMLHttpRequest();
+	xhttp.onreadystatechange= function()
+	{
+		if (this.readyState==4 && this.status==200) {
+			processFile(this);
+		}
+	};
+
+	xhttp.open("GET", "employee.xml", true);
+	xhttp.send();
+
+	function processFile(xml){
+		var xmlDoc=xml.responseXML;
+		var table1=document.getElementById("emptable").innerHTML;
+		var table2=document.getElementById("stat").innerHTML;
+
+		var empArray=xmlDoc.getElementsByTagName("emp");
+		var SalaryCOMP=0,SalaryIT=0,SalaryENTC=0;
+		var CountCOMP=0,CountIT=0,CountENTC=0;
+
+	
+		for(var i=0;i<empArray.length;i++){
+
+			var name=empArray[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
+			var id=empArray[i].getElementsByTagName("id")[0].childNodes[0].nodeValue;
+			var salary=parseInt(empArray[i].getElementsByTagName("salary")[0].childNodes[0].nodeValue);
+			var dept=empArray[i].getElementsByTagName("department")[0].childNodes[0].nodeValue;
+
+			switch(dept)
+			{	
+				case "COMP":
+					CountCOMP++;
+					SalaryCOMP=SalaryCOMP+salary;
+					break;
+				case "IT":
+					CountIT++;
+					SalaryIT=SalaryIT+salary;
+					break;
+				case "ENTC":
+					CountENTC++;
+					SalaryENTC=SalaryENTC+salary;
+					break;
+			}
+		
+			table1=table1+"<tr><td>"+id+"</td><td>"+name+"</td><td>"+dept+"</td><td>"+salary+"</td></tr>";
+		}
+
+		document.getElementById("emptable").innerHTML=table1;
+		
+		SalaryCOMP=SalaryCOMP/CountCOMP;
+		SalaryIT=SalaryIT/CountIT;
+		SalaryENTC=SalaryENTC/CountENTC;
+	
+		table2=table2+"<tr><td>COMP</td><td>"+CountCOMP+"</td><td>"+SalaryCOMP+"</td></tr>";
+		table2=table2+"<tr><td>IT</td><td>"+CountIT+"</td><td>"+SalaryIT+"</td></tr>";
+		table2=table2+"<tr><td>ENTC</td><td>"+CountENTC+"</td><td>"+SalaryENTC+"</td></tr>";
+
+
+		document.getElementById("stat").innerHTML=table2;
+	}
+</script>
+</body>
+</html>

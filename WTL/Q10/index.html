@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>ARITHMETIC OPERATION</title>
+<script src="angular.min.js"></script>
+<script src="script.js" type="text/javascript"></script>
+</head>
+<body ng-app="application" ng-controller="controller">
+<center>
+<h1>ARITHMETIC OPERATION</h1>
+
+<input type="number" ng-model="first" placeholder="ENTER FIRST NUMBER" required><br>
+<input type="number" ng-model="second" placeholder="ENTER SECOND NUMBER" required><br><br>
+<input type="button" value="ADD" ng-click="add()">
+<input type="button" value="SUBTRACT" ng-click="sub()">
+<input type="button" value="MULTIPLY" ng-click="mul()">
+<input type="button" value="DIVIDE" ng-click="div()"><br><br>
+<input type="text" placeholder="RESULT" ng-model="result" readonly>
+<br><br><br>
+<input type="number" ng-model="angle" placeholder="ENTER ANGLE"><br><br>
+<input type="button" ng-click="sinf()" value="SIN">
+<input type="button" ng-click="cosf()" value="COS">
+<input type="button" ng-click="tanf()" value="TAN"><br><br>
+<input type="text" placeholder="RESULT" ng-model="result2" readonly>
+ 
+</center>
+</body>
+</html>
